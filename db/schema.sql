@@ -1,5 +1,7 @@
 CREATE DATABASE healthcare_access_platform;
+
 USE healthcare_access_platform;
+
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
@@ -11,6 +13,7 @@ CREATE TABLE users (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 CREATE TABLE appointments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   patient_id INT,
@@ -34,6 +37,7 @@ CREATE TABLE medical_history (
   FOREIGN KEY (patient_id) REFERENCES users(id),
   FOREIGN KEY (provider_id) REFERENCES users(id)
 );
+
 CREATE TABLE feedback (
   id INT AUTO_INCREMENT PRIMARY KEY,
   appointment_id INT,

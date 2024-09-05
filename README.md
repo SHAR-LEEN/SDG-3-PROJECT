@@ -21,20 +21,19 @@ healthcare-access-platform/
 │
 ├── db/
 │   └── schema.sql                 # SQL script to create the database and tables
-├── src/
-│   ├── config/
+│├── config/
 │   │   └── db.js                  # Sequelize configuration file
-│   ├── controllers/
+│├── controllers/
 │   │   ├── authController.js      # Controller for user authentication
 │   │   └── appointmentController.js # Controller for appointments
-│   ├── models/
+│├── models/
 │   │   └── userModel.js           # User model
-│   ├── routes/
+│├── routes/
 │   │   ├── authRoutes.js          # Routes for user authentication
 │   │   └── appointmentRoutes.js   # Routes for appointment management
-│   ├── middleware/
+│├── middleware/
 │   │   └── authMiddleware.js      # Middleware for authentication
-│   └── app.js                     # Main application entry point
+└── app.js                     # Main application entry point
 ├── public/
 │   ├── index.html                 # Main HTML file
 │   ├── style.css                  # Stylesheet
@@ -78,7 +77,7 @@ healthcare-access-platform/
 5. **Start the Server:**
 
    ```bash
-   node app.js
+   node src/app.js
    ```
 
    The platform will be available at `http://localhost:5000`.
